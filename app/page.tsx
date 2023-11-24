@@ -155,7 +155,7 @@ export default function Home() {
           />
           <div>
             <h3 className='text-xl font-semibold mb-3'>Pay bills on the go</h3>
-            <p className='text-sm md:text-lg'>Experience unparalleled convenience with Billslink's 'Pay Bills on the Go' feature, allowing you to effortlessly manage and settle your bills anytime, anywhere. Enjoy the freedom to stay on top of your financial commitments without being tied to a desk or burdened by paperwork.
+            <p className='text-sm md:text-lg'>Experience unparalleled convenience with Billslink&apos;s &apos;Pay Bills on the Go&apos; feature, allowing you to effortlessly manage and settle your bills anytime, anywhere. Enjoy the freedom to stay on top of your financial commitments without being tied to a desk or burdened by paperwork.
             </p>
           </div>
         </div>
@@ -169,7 +169,7 @@ export default function Home() {
           />
           <div>
             <h3 className='text-xl font-semibold mb-3'>Seamless Transaction</h3>
-            <p className='text-sm md:text-lg'>At Billslink, we prioritize delivering a seamless transaction experience that sets us apart. Our platform is meticulously designed to ensure that every transaction, whether it's a VTU top-up or a bill payment, is executed effortlessly. From a user-friendly interface to a streamlined process.
+            <p className='text-sm md:text-lg'>At Billslink, we prioritize delivering a seamless transaction experience that sets us apart. Our platform is meticulously designed to ensure that every transaction, whether it&apos;s a VTU top-up or a bill payment, is executed effortlessly. From a user-friendly interface to a streamlined process.
             </p>
           </div>
         </div>
@@ -217,7 +217,7 @@ export default function Home() {
               <div>
                 <h3 className='text-2xl font-semibold mb-3'>Airtime Top-up</h3>
                 <p className='text-sm md:text-lg'>
-                  Now, topping up your mobile airtime has never been easier – whether you're on the go or at home. Say goodbye to the hassle of searching for physical recharge cards or dealing with complex codes
+                  Now, topping up your mobile airtime has never been easier – whether you&apos;re on the go or at home. Say goodbye to the hassle of searching for physical recharge cards or dealing with complex codes
                 </p>
               </div>
             </div>
@@ -226,7 +226,7 @@ export default function Home() {
               <div>
                 <h3 className='text-2xl font-semibold mb-3'>Airtime Top-up</h3>
                 <p className='text-sm md:text-lg'>
-                  Now, topping up your mobile airtime has never been easier – whether you're on the go or at home. Say goodbye to the hassle of searching for physical recharge cards or dealing with complex codes
+                  Now, topping up your mobile airtime has never been easier – whether you&apos;re on the go or at home. Say goodbye to the hassle of searching for physical recharge cards or dealing with complex codes
                 </p>
               </div>
               <Image
@@ -394,7 +394,7 @@ export default function Home() {
         </div>
         <div className=' md:w-2/4 text-center md:text-left '>
           <h1 className='text-xl md:text-4xl font-extrabold md:mb-5'>Become a BillsLink Agent</h1>
-          <p className='mb-3 md:mb-10 leading-7 text-sm md:text-lg'>As a Billslink agent, you'll be part of a dynamic platform that empowers you to offer VTU and bill payment services to your community. Enjoy the benefits of a simple onboarding process, competitive commissions, and access to a wide range of services. Become a valued partner in the Billslink network by joining us as an agent and unlock a world of opportunities in financial services.</p>
+          <p className='mb-3 md:mb-10 leading-7 text-sm md:text-lg'>As a Billslink agent, you&apos;ll be part of a dynamic platform that empowers you to offer VTU and bill payment services to your community. Enjoy the benefits of a simple onboarding process, competitive commissions, and access to a wide range of services. Become a valued partner in the Billslink network by joining us as an agent and unlock a world of opportunities in financial services.</p>
         
           {/* button */}
           <div className='flex m-auto px-7 py-3 items-center justify-between bg-white w-52 duration-500  rounded-lg blue1 font-semibold'>
@@ -528,7 +528,7 @@ export default function Home() {
         <div className='flex flex-col gap-4 text-center md:text-left w-full md:w-1/2'>
           <h1 className='blue1 text-2xl md:text-5xl font-semibold'>Let’s get in touch</h1> 
           <p className=' md:w-10/12 leading-6'>
-            We'd love to hear from you! Whether you have questions about our services, need assistance, or want to explore partnership opportunities, let's get in touch.
+            We&apos;d love to hear from you! Whether you have questions about our services, need assistance, or want to explore partnership opportunities, let&apos;s get in touch.
           </p>
 
           <div className='flex flex-col items-center md:items-start gap-3 blue1 underline font-semibold'>
