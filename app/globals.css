@@ -2,26 +2,60 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.blue1 {
+color: #0345E6;
+}
+.blue2 {
+    background-color:#0345E6 ;
+    color: white;
+}
+.blue3 {
+    background-color: #E6ECFD;
+}
+.start {
+    width: 540px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.height1 {
+    height: 300px;
+    margin-top: 25px;
+    width: 326px;
+}
+@media (min-width: 768px) {
+    .height1 {
+        height: 100%;
+        margin-top: 45px;
+        width: 500px;
+    }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.active, .accordion:hover {
+    background-color:#0345E6 ;
+    color: white;
+}
+.footer{
+    background-color: #1B1F23;
+    width: 100%;
+}
+.text {
+    color: #1B1F23;
+}
+/* card */
+.card {
+    transform-style: preserve-3d;
+    transition:transform 1500ms ;
+}
+.card:hover {
+    cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+/* front and back of the card */
+.front,
+.back {
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
 }
