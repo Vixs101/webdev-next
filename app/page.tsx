@@ -32,7 +32,7 @@ export default function Home() {
   return (
   <main className='h-screen relative'>
     {/* hero section */}
-    <section className='flex flex-col gap-20 md:gap-0 justify-between px-5 md:px-14  w-full h-3/5 md:h-99 bg-cover bg-center' style={{backgroundImage:"url(/images/herosection.png)"}}>
+    <section className='flex flex-col gap-7 md:gap-0 md:justify-between px-5 md:px-14  w-full md:h-99 bg-cover bg-center' style={{backgroundImage:"url(/images/herosection.png)"}}>
       {/* nav bar */}
       <nav className='pt-9 flex md:items-center md:justify-between '>
       <div className='flex items-center justify-between w-full md:w-8'>
@@ -42,7 +42,7 @@ export default function Home() {
               alt='Logo'
             />
           </span>
-          <FontAwesomeIcon icon={faBars} className='w-9 h-9 text-white md:hidden' />
+          <FontAwesomeIcon icon={faBars} className='w-7 h-7 text-white md:hidden' />
         </div>
 
         {/* navs */}  
@@ -86,25 +86,25 @@ export default function Home() {
       </nav>
       {/* hero text and image */}
 
-      <div className='flex justify-between gap-5 md:gap-28 mt-5 md:mt-24 '
+      <div className='flex flex-col items-center md:items-start md:flex-row md:justify-between gap-4 md:gap-28 md:mt-24 '
            style={{height: '69.886%'}}>
         {/* hero text */}
-        <div className='text-white md:mt-10 leading-6 '>
-          <h1 className='text-sm md:text-2xl lg:text-4xl xl:text-5xl font-bold '>
+        <div className='text-white text-center md:mt-10 leading-6'>
+          <h1 className='text-xl md:text-2xl lg:text-4xl xl:text-5xl font-bold '>
             Manage and Pay Your Bills, All From One Place!
           </h1>
           <p className='md:leading-6 text-xs md:text-sm lg:text-base mt-3 md:mt-0'>
             Your Trusted VTU and Bill Payment Platform for Quick & Seamless Transactions. Anywhere, Anytime!
           </p>
 
-          <div className='flex gap-3 md:gap-7 md:mt-10 mt-3'>
+          <div className='flex justify-center md:justify-normal gap-3 md:gap-7 md:mt-10 mt-3'>
             <Image 
-              className='w-1/2 md:w-36 md:h-12'
+              className=' w-1/3 h-10 md:w-36 md:h-12'
               src={google} 
               alt='google playstore'
             />
             <Image 
-              className='w-1/2 md:w-36 md:h-12'
+              className='w-1/3 h-10 md:w-36 md:h-12'
               src={apple} 
               alt='apple store'
             />
@@ -112,7 +112,7 @@ export default function Home() {
         </div>
         {/* hero image */}
         <Image 
-              className=' h-48 w-44  md:h-full md:w-1/2 '
+              className=' h-44 w-44  md:h-full md:w-1/2 '
               src={phones} 
               alt='phones'
             />
@@ -122,8 +122,8 @@ export default function Home() {
     {/* review section */}
     <section>
       {/* reviews */}
-      <ul className='grid grid-cols-2 grid-rows-2  md:flex w-full text-sm md:text-2xl gap-5 md:gap-36 mt-10 px-5 md:px-14  flex-wrap md:flex-nowrap'>
-        <li className='text-xs md:text-sm  w-36 md:w-auto'>Trusted by more than <span className='blue1 font-semibold'>1000+</span> active users across the country</li>
+      <ul className='grid grid-cols-2 grid-rows-2 md:flex w-full text-sm md:text-2xl gap-5 md:gap-14 lg:gap-36 mt-10 px-5 md:px-14  flex-wrap md:flex-nowrap'>
+        <li className='text-xs md:text-sm pt-3 md:pt-0 w-36 md:w-auto'>Trusted by more than <span className='blue1 font-semibold'>1000+</span> active users across the country</li>
         <li className='flex gap-2 m-auto md:m-0 md:gap-4'>
           <span className='blue1 text-4xl md:text-5xl font-semibold'>1k</span>
           <span className='w-5 text-xs md:text-sm'>User Ratings</span>  
@@ -134,11 +134,11 @@ export default function Home() {
         </li>
         <li className='flex gap-2 m-auto md:m-0 md:gap-4'>
           <span className='blue1 text-4xl md:text-5xl font-semibold'>90%</span>
-          <span className='text-xs md:text-sm leading-5 w-28'>Satisfied and Happy Clients</span>
+          <span className='text-xs md:text-sm leading-5 w-26'>Satisfied and Happy Clients</span>
         </li>
       </ul>
 
-      <div className='text-center mt-5 md:mt-28'>
+      <div className='text-center mt-20 md:mt-28'>
         <h1 className='text-2xl md:text-5xl font-semibold md:mb-5'>Why Choose <span className='blue1'>BillsLink</span></h1>
         <p className='text-sm md:text-lg'>Your top payment platform with reliable user-service experience</p>
       </div>
@@ -206,7 +206,7 @@ export default function Home() {
 
     {/* services section */}
     <section className='blue3 pb-5' id='services'>
-      <div className='text-center pt-5 mt-10 md:mt-28'>
+      <div className='text-center pt-5 mt-28'>
         <h1 className='text-2xl md:text-5xl font-semibold md:mb-5'>Our Services</h1>
         <p className='text-sm md:text-lg'>Our comprehensive suite of services encompasses seamless VTU transactions</p>
       </div>
@@ -318,7 +318,7 @@ export default function Home() {
     </section>
 
     {/* getting started section */}
-    <section className='flex flex-col md:flex-row items-center justify-between px-5 md:px-14 mt-10'>
+    <section className='flex flex-col md:flex-row items-center justify-between px-5 md:px-14 mt-28 md:mt-10'>
       <div className='start flex flex-col items-center gap-5 px-10'>
         <div className='w-3/4 text-center md:w-auto' >
           <h1 className='text-2xl md:text-4xl font-semibold md:mb-5'> 
@@ -383,16 +383,16 @@ export default function Home() {
     </section>
 
     {/* agent section */}
-    <section className='px-5 md:px-14 pt-3 md:pt-10 mt-3 md:mt-10' id='agent'>
-      <div className='flex flex-col gap-5 md:gap-0 md:flex-row items-center justify-between blue2 rounded-lg pl-5 md:pl-20 pr-10 md:pr-36 pt-5 pb-5 md:pt-32 md:pb-0'>
-        <div className=' '>
+    <section className='px-5 md:px-14 pt-3 md:pt-10 mt-28 md:mt-10' id='agent'>
+      <div className='flex flex-col gap-5 md:gap-0 md:flex-row items-center justify-between blue2 rounded-lg pl-5 md:pl-20 pr-5 md:pr-36 pt-5 pb-5 md:pt-32 md:pb-0'>
+        <div className=' order-2 md:order-1'>
           <Image
             className='h-64 md:h-96 w-44 md:w-full '
             src={agent}
             alt='agent section mockup'
          />
         </div>
-        <div className=' md:w-2/4 text-center md:text-left '>
+        <div className='order-1 md:order-2 md:w-2/4 text-center md:text-left '>
           <h1 className='text-xl md:text-4xl font-extrabold md:mb-5'>Become a BillsLink Agent</h1>
           <p className='mb-3 md:mb-10 leading-7 text-sm md:text-lg'>As a Billslink agent, you&apos;ll be part of a dynamic platform that empowers you to offer VTU and bill payment services to your community. Enjoy the benefits of a simple onboarding process, competitive commissions, and access to a wide range of services. Become a valued partner in the Billslink network by joining us as an agent and unlock a world of opportunities in financial services.</p>
         
@@ -499,7 +499,7 @@ export default function Home() {
             Join The New Billing & VTU Platform For Seamless Transactions
           </h1>
 
-          <div className='flex gap-7'>
+          <div className='flex flex-col md:flex-row items-center md:items-start gap-7'>
             <Image 
               className='w-32 md:w-auto md:h-auto h-10'
               src={google} 
@@ -598,8 +598,8 @@ export default function Home() {
          <li className='text-sm md:text-lg leading-1 md:leading-none'><a>Security</a></li>
         </ul>
 
-        <div className='flex flex-col sm:ml-16 md:ml-0 gap-5'>
-          <div className='flex gap-3 mt-2'>
+        <div className='flex flex-col items-center md:items-start sm:ml-16 md:ml-0 gap-5'>
+          <div className='flex gap-3 mt-2 ml-6 md:ml-0'>
             <Image
               className='w-10 h-10'
               src={facebook}
@@ -628,7 +628,7 @@ export default function Home() {
       </div>
       
       <hr className=' mt-12 ' />
-      <p className='my-5'>&copy; 2023. BillsLink. All rights reserved</p>
+      <p className='my-5 text-sm md:text-lg text-center'>&copy; 2023. BillsLink. All rights reserved</p>
     </footer>
   </main>
   )
