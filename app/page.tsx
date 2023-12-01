@@ -30,7 +30,7 @@ import cable from '../public/images/cable.png';
 
 export default function Home() {
   return (
-  <main className='h-screen relative'>
+  <main className='h-screen relative overflow-x-hidden'>
     {/* hero section */}
     <section className='flex flex-col gap-7 md:gap-0 md:justify-between px-5 md:px-14  w-full md:h-99 bg-cover bg-center' style={{backgroundImage:"url(/images/herosection.png)"}}>
       {/* nav bar */}
