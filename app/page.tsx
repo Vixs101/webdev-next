@@ -47,7 +47,7 @@ export default function Home() {
 
         {/* navs */}  
         {/* i was supposed to use js to make the links appear onclick but i had issues with importing it which is part of the main reasons why i didn't breakdown the page into componenst cos when i tried importing i get an issue about client and server rendering.
-        same thing with the frequently asked question section */}
+        same thing with the fag section*/}
         <ul className='md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 
         md:w-auto md:opacity-100 opacity-0 top-[-400px] transition-all ease-out duration-700 md:text-sm lg:text-lg'>
 
@@ -89,7 +89,7 @@ export default function Home() {
       <div className='flex flex-col items-center md:items-start md:flex-row md:justify-between gap-4 md:gap-28 md:mt-24 '
            style={{height: '69.886%'}}>
         {/* hero text */}
-        <div className='text-white text-center md:mt-10 leading-6'>
+        <div className='text-white text-center md:text-left md:mt-10 leading-6'>
           <h1 className='text-xl md:text-2xl lg:text-4xl xl:text-5xl font-bold '>
             Manage and Pay Your Bills, All From One Place!
           </h1>
@@ -463,7 +463,7 @@ export default function Home() {
         <FontAwesomeIcon icon={faChevronDown} className='w-5 h-5' />
         </button>
       </div>
-      <div className='w-full md:w-4/5 mt-10 rounded-lg'>
+      <div className='w-full md:w-4/5 mt-5 rounded-lg'>
         <button
           className='flex justify-between items-center px-7 py-3 gap-5 cursor-pointer w-full text-lg md:text-xl font-semibold duration-300 border-2 border-gray-300'>
           Why should I use BillsLink?
