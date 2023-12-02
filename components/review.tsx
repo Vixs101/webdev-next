@@ -1,4 +1,7 @@
 import React from "react";
+import { inView, motion } from 'framer-motion';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 import bills from '../public/images/bills.png';
 import transaction from '../public/images/transaction.png';
@@ -6,10 +9,34 @@ import user from '../public/images/user.png';
 import secure from '../public/images/secure.png';
 
 const Review = () => {
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+    });
+
+    const variants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+      };
+    
+      useEffect(() => {
+        if(inView) { }
+        // Add a delay before starting the animation
+        const delayTimeout = setTimeout(() => {
+        }, 30);
+    
+        // Clear the timeout to avoid memory leaks
+        return () => clearTimeout(delayTimeout);
+      }, [inView]);
+
     return (
         <section>
         {/* reviews */}
-            <ul className='grid grid-cols-2 grid-rows-2 md:flex w-full text-sm md:text-2xl gap-5 md:gap-14 lg:gap-36 mt-10 px-5 md:px-14  flex-wrap md:flex-nowrap'>
+            <motion.ul
+                initial="hidden"
+                animate={'visible'}
+                variants={variants}
+                transition={{duration: 0.8}}
+                className='grid grid-cols-2 grid-rows-2 md:flex w-full text-sm md:text-2xl gap-5 md:gap-14 lg:gap-36 mt-10 px-5 md:px-14  flex-wrap md:flex-nowrap'>
                 <li className='text-xs md:text-sm pt-3 md:pt-0 w-36 md:w-auto'>Trusted by more than <span className='blue1 font-semibold'>1000+</span> active users across the country</li>
                 <li className='flex gap-2 m-auto md:m-0 md:gap-4'>
                     <span className='blue1 text-4xl md:text-5xl font-semibold'>1k</span>
@@ -23,12 +50,19 @@ const Review = () => {
                     <span className='blue1 text-4xl md:text-5xl font-semibold'>90%</span>
                     <span className='text-xs md:text-sm leading-5 w-26'>Satisfied and Happy Clients</span>
                 </li>
-            </ul>
+            </motion.ul>
   
-            <div className='text-center mt-20 md:mt-28'>
+            <motion.div
+                ref={ref}
+                initial='hidden'
+                animate={inView ? 'visible' : 'hidden'}
+                variants={variants}
+                transition={{duration: 0.8}}
+
+                className='text-center mt-20 md:mt-28'>
                 <h1 className='text-2xl md:text-5xl font-semibold md:mb-5'>Why Choose <span className='blue1'>BillsLink</span></h1>
                 <p className='text-sm md:text-lg'>Your top payment platform with reliable user-service experience</p>
-            </div>
+            </motion.div>
   
             {/* cards */}
             <div className="grid md:grid-cols-2 md:grid-rows-2 gap-5 px-5 md:px-14 mt-10">

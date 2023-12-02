@@ -1,3 +1,6 @@
+'use client'
+import { motion } from 'framer-motion';
+import { useEffect } from 'react';
 import React from "react";
 import Image from 'next/image';
 import logo from '../public/images/logo.png';
@@ -8,7 +11,21 @@ import google from '../public/images/googleplay.png';
 import apple from '../public/images/applestore.png';
 import phones from '../public/images/phones.png';
 
-const HeroSection = () => {
+const HeroSection = () => {    
+      const variants = {
+        hidden: { opacity: 0, y: 50 },
+        visible: { opacity: 1, y: 0 },
+      };
+    
+      useEffect(() => {
+        // Add a delay before starting the animation
+        const delayTimeout = setTimeout(() => {
+        }, 30);
+    
+        // Clear the timeout to avoid memory leaks
+        return () => clearTimeout(delayTimeout);
+      }, []);
+
     return (
         <section className='flex flex-col gap-7 md:gap-0 md:justify-between px-5 md:px-14  w-full md:h-99 bg-cover bg-center' style={{backgroundImage:"url(/images/herosection.png)"}}>
             {/* nav bar */}
@@ -61,9 +78,14 @@ const HeroSection = () => {
             </nav>
            {/* hero text and image */}
   
-            <div className='flex flex-col items-center md:items-start md:flex-row md:justify-between gap-4 md:gap-28 md:mt-24 '
+            <motion.div
+             initial="hidden"
+             animate={'visible'}
+             variants={variants}
+             transition={{ duration: 0.8 }}   
+             className='flex flex-col items-center md:items-start md:flex-row md:justify-between gap-4 md:gap-28 md:mt-24 '
              style={{height: '69.886%'}}>
-            {/* hero text */}
+                {/* hero text */}
                 <div className='text-white text-center md:text-left md:mt-10 leading-6'>
                     <h1 className='text-xl md:text-2xl lg:text-4xl xl:text-5xl font-bold '>
                         Manage and Pay Your Bills, All From One Place!
@@ -91,7 +113,7 @@ const HeroSection = () => {
                     src={phones} 
                     alt='phones'
                 />
-            </div>
+            </motion.div>
         </section>
     );
 };
