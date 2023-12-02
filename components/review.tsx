@@ -65,16 +65,16 @@ const Review = () => {
             </motion.div>
   
             {/* cards */}
-            <motion.div 
-                ref={ref}
-                initial='hidden'
-                animate={inView ? 'visible' : 'hidden'}
-                variants={variants}
-                transition={{duration: 0.8}}
+            <div 
                 className="grid md:grid-cols-2 md:grid-rows-2 gap-5 px-5 md:px-14 mt-10">
-  
                 {/* card1 */}
-                <div className="flex items-center gap-4 bg-gray-200 h-80 w-97 px-3 py-9 md:px-5 md:py-14">
+                <motion.div
+                    ref={ref}
+                    initial='hidden'
+                    animate={inView ? 'visible' : 'hidden'}
+                    variants={variants}
+                    transition={{duration: 0.8}}
+                    className="flex items-center gap-4 bg-gray-200 h-80 w-97 px-3 py-9 md:px-5 md:py-14">
                     <Image
                         className=' w-10 h-10 md:w-16 md:h-16'
                         src={bills}
@@ -85,7 +85,7 @@ const Review = () => {
                         <p className='text-sm md:text-lg'>Experience unparalleled convenience with Billslink&apos;s &apos;Pay Bills on the Go&apos; feature, allowing you to effortlessly manage and settle your bills anytime, anywhere. Enjoy the freedom to stay on top of your financial commitments without being tied to a desk or burdened by paperwork.
                         </p>
                     </div>
-                </div>
+                </motion.div>
   
                 {/* card2 */}
                 <div className="flex items-center gap-4 bg-gray-200 h-80 w-97 px-5 py-14">
@@ -128,7 +128,7 @@ const Review = () => {
                         </p>
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </section>
 
     );
