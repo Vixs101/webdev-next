@@ -1,4 +1,7 @@
 import React from "react";
+import { inView, motion } from 'framer-motion';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 import airtime from '../public/images/airtime.png';
 import data from '../public/images/data.png';
@@ -6,8 +9,28 @@ import bills1 from '../public/images/bills1.png';
 import cable from '../public/images/cable.png';
 
 const Services = () => {
+    const [ref, inView] = useInView ({
+        triggerOnce: true,
+    });
+
+    const variants = {
+        hidden: {opacity: 0, y : 50},
+        visible: {opacity: 1, y : 0},
+    };
+
+    useEffect (() => {
+        if(inView) { }
+    }, [inView]);
+
     return (
-        <section className='blue3 pb-5' id='services'>
+        <motion.section
+            ref={ref}
+            initial='hidden'
+            animate={inView ? 'visible' : 'hidden'}
+            variants={variants}
+            transition={{duration: 0.8}}
+            
+            className='blue3 pb-5' id='services'>
             <div className='text-center pt-5 mt-28'>
                 <h1 className='text-2xl md:text-5xl font-semibold md:mb-5'>Our Services</h1>
                 <p className='text-sm md:text-lg'>Our comprehensive suite of services encompasses seamless VTU transactions</p>
@@ -117,7 +140,7 @@ const Services = () => {
                     </div>
                 </div>          
             </div>
-        </section>
+        </motion.section>
 
     );
 };
