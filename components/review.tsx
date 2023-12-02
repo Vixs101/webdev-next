@@ -65,7 +65,13 @@ const Review = () => {
             </motion.div>
   
             {/* cards */}
-            <div className="grid md:grid-cols-2 md:grid-rows-2 gap-5 px-5 md:px-14 mt-10">
+            <motion.div 
+                ref={ref}
+                initial='hidden'
+                animate={inView ? 'visible' : 'hidden'}
+                variants={variants}
+                transition={{duration: 0.8}}
+                className="grid md:grid-cols-2 md:grid-rows-2 gap-5 px-5 md:px-14 mt-10">
   
                 {/* card1 */}
                 <div className="flex items-center gap-4 bg-gray-200 h-80 w-97 px-3 py-9 md:px-5 md:py-14">
@@ -122,7 +128,7 @@ const Review = () => {
                         </p>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </section>
 
     );
