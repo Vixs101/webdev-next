@@ -88,7 +88,13 @@ const Review = () => {
                 </motion.div>
   
                 {/* card2 */}
-                <div className="flex items-center gap-4 bg-gray-200 h-80 w-97 px-5 py-14">
+                <motion.div
+                    ref={ref}
+                    initial='hidden'
+                    animate={inView ? 'visible' : 'hidden'}
+                    variants={variants}
+                    transition={{duration: 0.8}}
+                    className="flex items-center gap-4 bg-gray-200 h-80 w-97 px-5 py-14">
                     <Image
                         className=' w-10 h-10 md:w-16 md:h-16'
                         src={transaction}
@@ -99,10 +105,16 @@ const Review = () => {
                         <p className='text-sm md:text-lg'>At Billslink, we prioritize delivering a seamless transaction experience that sets us apart. Our platform is meticulously designed to ensure that every transaction, whether it&apos;s a VTU top-up or a bill payment, is executed effortlessly. From a user-friendly interface to a streamlined process.
                         </p>
                     </div>
-                </div>
+                </motion.div>
   
                 {/* card3 */}
-                <div className="flex items-center gap-4 bg-gray-200 h-80 w-97 px-5 py-14">
+                <motion.div
+                    ref={ref}
+                    initial='hidden'
+                    animate={inView ? 'visible' : 'hidden'}
+                    variants={variants}
+                    transition={{duration: 0.8}}
+                    className="flex items-center gap-4 bg-gray-200 h-80 w-97 px-5 py-14">
                     <Image
                         className='w-10 h-10 md:w-16 md:h-16'
                         src={secure}
@@ -113,10 +125,16 @@ const Review = () => {
                         <p className='text-sm md:text-lg'>Our platform is engineered to ensure rapid transactions without compromising on safety. With cutting-edge technology and robust security measures in place, we guarantee that your financial information remains confidential and protected. Enjoy the efficiency of swift transactions on Billslink.
                         </p>
                     </div>
-                </div>
+                </motion.div>
   
                 {/* card4 */}
-                <div className="flex items-center gap-4 bg-gray-200 h-80 w-97 px-5 py-14">
+                <motion.div
+                    ref={ref}
+                    initial='hidden'
+                    animate={inView ? 'visible' : 'hidden'}
+                    variants={variants}
+                    transition={{duration: 0.8}}                    
+                    className="flex items-center gap-4 bg-gray-200 h-80 w-97 px-5 py-14">
                     <Image
                         className='w-10 h-10 md:w-16 md:h-16'
                         src={user}
@@ -127,7 +145,7 @@ const Review = () => {
                         <p className='text-sm md:text-lg'>Navigating through our intuitive interface is designed to be effortless, ensuring that users of all backgrounds can easily access and utilize our services. Choose Billslink for a user-friendly experience that combines efficiency with ease, redefining how you manage your VTU and bills payments.
                         </p>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
 
