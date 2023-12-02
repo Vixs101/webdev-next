@@ -1,11 +1,33 @@
 import React from "react";
+import { inView, motion } from 'framer-motion';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faChevronDown} from '@fortawesome/free-solid-svg-icons';
 import { faArrowRight} from '@fortawesome/free-solid-svg-icons';
 
 const Faq = () => {
+    const [ref, inView] = useInView ({
+        triggerOnce: true,
+    });
+
+    const variants = {
+        hidden: {opacity: 0, y : 50},
+        visible: {opacity: 1, y : 0},
+    };
+
+    useEffect (() => {
+        if(inView) { }
+    }, [inView]);
+
     return (
-        <section className='flex flex-col items-center justify-center px-5' id='faq'>
+        <motion.section
+            ref={ref}
+            initial='hidden'
+            animate={inView ? 'visible' : 'hidden'}
+            variants={variants}
+            transition={{duration: 0.9}}        
+            className='flex flex-col items-center justify-center px-5' id='faq'>
             <div className='mt-28 text-center  md:w-101'>
                 <h1 className='text-2xl md:text-5xl font-semibold mb-2 md:mb-3'>Frequently Asked Questions</h1>
                 <p className='text-sm md:text-lg'>Want to know more about our services? Our FAQs section is here to help you with useful information about us.</p>
@@ -82,7 +104,7 @@ const Faq = () => {
                 </button>
                 <FontAwesomeIcon icon={faArrowRight} className='w-5 h-5' />        
             </div>
-        </section>
+        </motion.section>
     );
 };
 

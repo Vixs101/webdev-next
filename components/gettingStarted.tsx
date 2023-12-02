@@ -1,4 +1,7 @@
 import React from "react";
+import { inView, motion } from 'framer-motion';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 import download from '../public/images/download.png';
 import signup from '../public/images/signup.png';
@@ -8,8 +11,27 @@ import { faArrowRight} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const GettingStarted = () => {
+    const [ref, inView] = useInView ({
+        triggerOnce: true,
+    });
+
+    const variants = {
+        hidden: {opacity: 0, y : 50},
+        visible: {opacity: 1, y : 0},
+    };
+
+    useEffect (() => {
+        if(inView) { }
+    }, [inView]);
+
     return (
-        <section className='flex flex-col md:flex-row items-center justify-between px-5 md:px-14 mt-28 md:mt-10'>
+        <motion.section
+            ref={ref}
+            initial='hidden'
+            animate={inView ? 'visible' : 'hidden'}
+            variants={variants}
+            transition={{duration: 0.9}}        
+            className='flex flex-col md:flex-row items-center justify-between px-5 md:px-14 mt-28 md:mt-10'>
             <div className='start flex flex-col items-center gap-5 px-10'>
                 <div className='w-3/4 text-center md:w-auto' >
                     <h1 className='text-2xl md:text-4xl font-semibold md:mb-5'> 
@@ -71,7 +93,7 @@ const GettingStarted = () => {
             src={gettingstarted}
             alt='A phone showing how to get started'
             />
-        </section>
+        </motion.section>
 
     );
 };

@@ -1,12 +1,34 @@
 import React from "react";
+import { inView, motion } from 'framer-motion';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import agent from '../public/images/agent.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Image from 'next/image';
 import { faArrowRight} from '@fortawesome/free-solid-svg-icons';
 
 const Agent = () => {
+    const [ref, inView] = useInView ({
+        triggerOnce: true,
+    });
+
+    const variants = {
+        hidden: {opacity: 0, y : 50},
+        visible: {opacity: 1, y : 0},
+    };
+
+    useEffect (() => {
+        if(inView) { }
+    }, [inView]);
+
     return (
-        <section className='px-5 md:px-14 pt-3 md:pt-10 mt-28 md:mt-10' id='agent'>
+        <motion.section
+            ref={ref}
+            initial='hidden'
+            animate={inView ? 'visible' : 'hidden'}
+            variants={variants}
+            transition={{duration: 0.9}}        
+            className='px-5 md:px-14 pt-3 md:pt-10 mt-28 md:mt-10' id='agent'>
             <div className='flex flex-col gap-5 md:gap-0 md:flex-row items-center justify-between blue2 rounded-lg pl-5 md:pl-20 pr-5 md:pr-36 pt-5 pb-5 md:pt-32 md:pb-0'>
                 <div className=' order-2 md:order-1'>
                     <Image
@@ -28,7 +50,7 @@ const Agent = () => {
                 </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     );
 };
 

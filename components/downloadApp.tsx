@@ -1,4 +1,7 @@
 import React from "react";
+import { inView, motion } from 'framer-motion';
+import { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 import Image from 'next/image';
 import google from '../public/images/googleplay.png';
 import apple from '../public/images/applestore.png';
@@ -10,8 +13,28 @@ import insta from '../public/images/insta.png';
 import linkedin from '../public/images/linkedin.png';
 
 const DownloadApp = () => {
+    const [ref, inView] = useInView ({
+        triggerOnce: true,
+    });
+
+    const variants = {
+        hidden: {opacity: 0, y : 50},
+        hide: {opacity: 0, y : 5},
+        visible: {opacity: 1, y : 0},
+    };
+
+    useEffect (() => {
+        if(inView) { }
+    }, [inView]);
+
     return (
-        <section className='px-5 md:px-14 mt-10'>
+        <motion.section
+            ref={ref}
+            initial='hidden'
+            animate={inView ? 'visible' : 'hidden'}
+            variants={variants}
+            transition={{duration: 0.9}}  
+            className='px-5 md:px-14 mt-10'>
             {/* download */}
             <div className='flex flex-col md:flex-row gap-5 items-center md:justify-between px-10 pt-12 rounded-xl blue3 w-full'>
                 <div className='flex flex-col gap-5 md:gap-10 h-64 md:h-96 md:w-1/2'>
@@ -45,7 +68,13 @@ const DownloadApp = () => {
                 </div>
             </div>
             {/* get in touch */}
-            <div className='flex flex-col md:flex-row items-center justify-between mt-10 md:mt-20 w-full'>
+            <motion.div
+                ref={ref}
+                initial='hide'
+                animate={inView ? 'visible' : 'hide'}
+                variants={variants}
+                transition={{duration: 0.9}}  
+                className='flex flex-col md:flex-row items-center justify-between mt-10 md:mt-20 w-full'>
                 <div className='flex flex-col gap-4 text-center md:text-left w-full md:w-1/2'>
                 <h1 className='blue1 text-2xl md:text-5xl font-semibold'>Let’s get in touch</h1> 
                 <p className=' md:w-10/12 leading-6'>
@@ -83,8 +112,8 @@ const DownloadApp = () => {
                     alt='get in touch illustration'
                 /> 
                 </div>
-            </div>
-        </section>        
+            </motion.div>
+        </motion.section>        
     );
 };
 
