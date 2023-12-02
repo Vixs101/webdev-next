@@ -65,15 +65,15 @@ const Review = () => {
             </motion.div>
   
             {/* cards */}
-            <div 
+            <motion.div
+                ref={ref}
+                initial='hidden'
+                animate={inView ? 'visible' : 'hidden'}
+                variants={variants}
+                transition={{duration: 0.8}}                 
                 className="grid md:grid-cols-2 md:grid-rows-2 gap-5 px-5 md:px-14 mt-10">
                 {/* card1 */}
                 <motion.div
-                    ref={ref}
-                    initial='hidden'
-                    animate={inView ? 'visible' : 'hidden'}
-                    variants={variants}
-                    transition={{duration: 0.8}}
                     className="flex items-center gap-4 bg-gray-200 h-80 w-97 px-3 py-9 md:px-5 md:py-14">
                     <Image
                         className=' w-10 h-10 md:w-16 md:h-16'
@@ -89,11 +89,6 @@ const Review = () => {
   
                 {/* card2 */}
                 <motion.div
-                    ref={ref}
-                    initial='hidden'
-                    animate={inView ? 'visible' : 'hidden'}
-                    variants={variants}
-                    transition={{duration: 0.8}}
                     className="flex items-center gap-4 bg-gray-200 h-80 w-97 px-5 py-14">
                     <Image
                         className=' w-10 h-10 md:w-16 md:h-16'
@@ -109,11 +104,6 @@ const Review = () => {
   
                 {/* card3 */}
                 <motion.div
-                    ref={ref}
-                    initial='hidden'
-                    animate={inView ? 'visible' : 'hidden'}
-                    variants={variants}
-                    transition={{duration: 0.8}}
                     className="flex items-center gap-4 bg-gray-200 h-80 w-97 px-5 py-14">
                     <Image
                         className='w-10 h-10 md:w-16 md:h-16'
@@ -128,13 +118,7 @@ const Review = () => {
                 </motion.div>
   
                 {/* card4 */}
-                <motion.div
-                    ref={ref}
-                    initial='hidden'
-                    animate={inView ? 'visible' : 'hidden'}
-                    variants={variants}
-                    transition={{duration: 0.8}}                    
-                    className="flex items-center gap-4 bg-gray-200 h-80 w-97 px-5 py-14">
+                <div className="flex items-center gap-4 bg-gray-200 h-80 w-97 px-5 py-14">
                     <Image
                         className='w-10 h-10 md:w-16 md:h-16'
                         src={user}
@@ -145,8 +129,8 @@ const Review = () => {
                         <p className='text-sm md:text-lg'>Navigating through our intuitive interface is designed to be effortless, ensuring that users of all backgrounds can easily access and utilize our services. Choose Billslink for a user-friendly experience that combines efficiency with ease, redefining how you manage your VTU and bills payments.
                         </p>
                     </div>
-                </motion.div>
-            </div>
+                </div>
+            </motion.div>
         </section>
 
     );
