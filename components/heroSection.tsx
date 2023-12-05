@@ -29,7 +29,7 @@ const HeroSection = () => {
     return (
         <section className='flex flex-col gap-7 md:gap-0 md:justify-between px-5 md:px-14  w-full md:h-99 bg-cover bg-center' style={{backgroundImage:"url(/images/herosection.png)"}}>
             {/* nav bar */}
-            <nav className='pt-9 flex md:items-center md:justify-between '>
+            <nav className='pt-8 fixed flex md:items-center md:justify-between '>
                 <div className='flex items-center justify-between w-full md:w-8'>
                     <span className='cursor-pointer'>
                         <Image 
@@ -86,11 +86,11 @@ const HeroSection = () => {
              className='flex flex-col items-center md:items-start md:flex-row md:justify-between gap-4 md:gap-28 md:mt-24 '
              style={{height: '69.886%'}}>
                 {/* hero text */}
-                <div className='text-white text-center md:text-left md:mt-10 leading-6'>
-                    <h1 className='text-xl md:text-2xl lg:text-4xl xl:text-5xl font-bold '>
+                <div className='text-white text-center md:text-left md:mt-10 '>
+                    <h1 className='text-xl md:text-2xl lg:text-4xl xl:text-5xl font-bold leading-loose'>
                         Manage and Pay Your Bills, All From One Place!
                     </h1>
-                    <p className='md:leading-6 text-xs md:text-sm lg:text-base mt-3 md:mt-0'>
+                    <p className='md:leading-6 text-xs md:text-sm lg:text-base mt-3'>
                         Your Trusted VTU and Bill Payment Platform for Quick & Seamless Transactions. Anywhere, Anytime!
                     </p>
   
