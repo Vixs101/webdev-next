@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import { inView, motion } from 'framer-motion';
 import { useEffect } from 'react';
@@ -45,7 +46,7 @@ const GettingStarted = () => {
                  {/* step1 */}
                 <div className="flex items-center gap-4 py-3 pl-2 md:pl-5 pr-10 md:pr-14 bg-gray-100 w-3/4 md:w-auto">
                     <Image
-                        className=' w-10 h-10 md:w-16 md:h-16'
+                        className='w-10 h-10 md:w-16 md:h-16'
                         src={download}
                         alt='download icon'
                     />
@@ -57,7 +58,7 @@ const GettingStarted = () => {
                 {/* step2 */}
                 <div className="flex items-center gap-4 py-3 pl-2 md:pl-5 pr-10 md:pr-14 bg-gray-100 w-3/4 md:w-auto">
                     <Image
-                        className=' w-10 h-10 md:w-16 md:h-16'
+                        className='w-10 h-10 md:w-16 md:h-16'
                         src={signup}
                         alt='signup icon'
                     />
@@ -69,7 +70,7 @@ const GettingStarted = () => {
                 {/* step3 */}
                 <div className="flex items-center gap-4 py-3 pl-2 md:pl-5 pr-10 md:pr-14 bg-gray-100 w-3/4 md:w-auto">
                     <Image
-                    className='w-10 h-10 md:w-16 md:h-16'
+                    className=' w-10 h-10 md:w-16 md:h-16'
                     src={fund}
                     alt='fund wallet icon'
                     />

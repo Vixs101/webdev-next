@@ -1,7 +1,4 @@
 'use client'
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { useEffect } from 'react';
 import Footer from '@/components/footer';
 import DownloadApp from '@/components/downloadApp';
 import Faq from '@/components/faqs';
@@ -13,8 +10,6 @@ import HeroSection from '@/components/heroSection';
 
 
 export default function Home() {
-
-
   return (
     <main className='h-screen relative overflow-x-hidden'>
       <HeroSection />

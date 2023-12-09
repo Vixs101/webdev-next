@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .blue1 {
 color: #0345E6;
 }
@@ -61,3 +60,6 @@ color: #0345E6;
     transform: rotateY(180deg);
 }
 
+.line {
+    line-height: 280px;
+}
