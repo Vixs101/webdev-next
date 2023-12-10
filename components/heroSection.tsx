@@ -5,7 +5,6 @@ import React from "react";
 import Image from 'next/image';
 import logo from '../public/images/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faArrowRight} from '@fortawesome/free-solid-svg-icons';
 import google from '../public/images/googleplay.png';
 import apple from '../public/images/applestore.png';
@@ -27,18 +26,19 @@ const HeroSection = () => {
         return () => clearTimeout(delayTimeout);
       }, []);
 
+      const lineHeight = window.innerWidth >= 768 ? '3.9rem' : '1.2';
+
     return (
         <section className='flex flex-col gap-7 md:gap-0 md:justify-between md:px-14 w-full md:h-99 bg-cover bg-center' style={{backgroundImage:"url(/images/herosection.png)"}}>
             {/* nav bar */}
             <nav className='py-2 md:py-5 px-5 md:px-0 blue2 md:bg-transparent w-full z-10 md:z-0 fixed md:static flex md:items-center md:justify-between '>
-                <div className='flex items-center justify-between w-full md:w-8'>
+                <div className='flex items-center justify-between w-full md:w-1/5'>
                     <span className='cursor-pointer'>
                         <Image 
                             src={logo} 
                             alt='Logo'
                         />
                     </span>
-                    {/* <FontAwesomeIcon icon={faBars} className='w-7 h-7 text-white md:hidden' /> */}
                     <Menu  />
                 </div>
   
@@ -89,8 +89,8 @@ const HeroSection = () => {
              className='flex flex-col px-5 md:px-0 items-center md:items-start md:flex-row md:justify-between gap-4 md:gap-28 mt-20 md:mt-24 '
              style={{height: '69.886%'}}>
                 {/* hero text */}
-                <div className='text-white text-center md:text-left md:mt-10 leading-8 w-full'>
-                    <h1 className='text-xl md:text-2xl lg:text-4xl xl:text-5xl font-bold'>
+                <div className='text-white text-center md:text-left md:mt-10 w-full'>
+                    <h1 className='text-xl md:text-2xl lg:text-4xl xl:text-5xl font-bold' style={{lineHeight}}>
                         Manage and Pay Your Bills, All From One Place!
                     </h1>
                     <p className='md:leading-6 text-xs md:text-sm lg:text-base mt-3'>

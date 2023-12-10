@@ -34,7 +34,7 @@ const Faq = () => {
                 <p className='text-sm md:text-lg'>Want to know more about our services? Our FAQs section is here to help you with useful information about us.</p>
             </div>
             {/* faq */}     
-            <div className='w-full md:w-4/5 mt-10 rounded-lg active'>
+            <div className='w-full md:w-4/5 mt-10 rounded-lg blue2'>
                 <button
                     className='flex justify-between items-center px-7 py-3 gap-5 cursor-pointer w-full text-xl font-semibold duration-300'>
                     Why should I use BillsLink?

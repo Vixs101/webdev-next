@@ -28,6 +28,7 @@ const config: Config = {
       },
       lineHeight: {
         '12': '55.2px',
+        '13': '4rem'
       }
     },
   },

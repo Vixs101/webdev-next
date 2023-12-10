@@ -37,17 +37,17 @@ const Review = () => {
                 animate={'visible'}
                 variants={variants}
                 transition={{duration: 0.8}}
-                className='grid grid-cols-2 grid-rows-2 md:flex w-full text-sm md:text-2xl gap-5 md:gap-14 lg:gap-36 mt-10 px-5 md:px-14  flex-wrap md:flex-nowrap'>
-                <li className='text-xs md:text-sm pt-3 md:pt-0 w-36 md:w-auto'>Trusted by more than <span className='blue1 font-semibold'>1000+</span> active users across the country</li>
+                className='grid grid-cols-2 grid-rows-2 md:flex w-full text-sm md:text-2xl gap-5 md:gap-14 lg:gap-5 mt-10 px-5 md:px-14  flex-wrap md:flex-nowrap justify-around items-center'>
+                <li className='text-xs md:text-sm pt-3 md:ml-10 md:pt-0 w-36 md:w-56'>Trusted by more than <span className='blue1 font-semibold'>1000+</span> active users across the country</li>
                 <li className='flex gap-2 m-auto md:m-0 md:gap-4'>
                     <span className='blue1 text-4xl md:text-5xl font-semibold'>1k</span>
                     <span className='w-5 text-xs md:text-sm'>User Ratings</span>  
                 </li>
-                <li className='flex gap-2 w-36 md:w-auto md:gap-4'>
+                <li className='flex gap-2 md:mx-10 md:my-0 w-36 md:w-28 md:gap-4'>
                     <span className='blue1 text-4xl md:text-5xl font-semibold'>20k</span>
                     <span className='text-xs md:text-sm'>Successful Transactions</span>
                 </li>
-                <li className='flex gap-2 m-auto md:m-0 md:gap-4'>
+                <li className='flex gap-2 m-auto md:mx-10 md:w-56 md:gap-4'>
                     <span className='blue1 text-4xl md:text-5xl font-semibold'>90%</span>
                     <span className='text-xs md:text-sm leading-5 w-26'>Satisfied and Happy Clients</span>
                 </li>

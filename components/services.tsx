@@ -56,7 +56,7 @@ const Services = () => {
                             </p>
                         </div>
                         <Image
-                            className='place-self-end w-44 h-44 md:w-72 md:h-64'
+                            className='place-self-start w-44 h-44 md:w-72 md:h-64'
                             src={airtime}
                             alt='buying airtime on phone'
                         />  
@@ -108,7 +108,7 @@ const Services = () => {
                             </p>
                         </div>
                         <Image
-                            className='place-self-end w-44 h-44 md:w-72 md:h-64'
+                            className='place-self-start w-44 h-44 md:w-72 md:h-64'
                             src={bills1}
                             alt='buying airtime on phone'
                         />  

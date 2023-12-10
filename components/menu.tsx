@@ -3,16 +3,15 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
-import {faX} from '@fortawesome/free-solid-svg-icons';
+import { faBars, faHome, faWrench, faUserTie, faQuestionCircle, faPhoneAlt, faArrowRight, faX } from '@fortawesome/free-solid-svg-icons';
 import { motion, Variants } from "framer-motion";
 
 const links = [
-    { id:1, title: "Home", url: "/"},
-    { id:2, title: "Our Services", url: "/#services"},
-    { id:3, title: "Become An Agent", url: "/#agent"},
-    { id:4, title: "FAQ", url: "/#faq"},
-    { id:5, title: "Contact Us", url: "/#contact"},
+    { id:1, title: "Home", url: "/", icon:faHome},
+    { id:2, title: "Our Services", url: "/#services", icon:faWrench},
+    { id:3, title: "Become An Agent", url: "/#agent",icon: faUserTie},
+    { id:4, title: "FAQ", url: "/#faq", icon: faQuestionCircle},
+    { id:5, title: "Contact Us", url: "/#contact", icon: faPhoneAlt},
 ];
 
 const Menu = () => {
@@ -37,29 +36,22 @@ const Menu = () => {
 
             {open && (
                 <motion.div 
-                    animate={open ? "open" : "closed"}
-                    variants={{
-                        open: {
-                        clipPath: "inset(0% 0% 0% 0% round 10px)",
-                        transition: {
-                            type: "spring",
-                            bounce: 0,
-                            duration: 0.7,
-                            delayChildren: 0.3,
-                            staggerChildren: 0.05
-                        }
-                        },
-                        closed: {
-                        clipPath: "inset(10% 50% 90% 50% round 10px)",
-                        transition: {
-                            type: "spring",
-                            bounce: 0,
-                            duration: 0.3
-                        }
-                        }
-                    }}
-                    className="absolute right-2 mt-12 h-[calc(100vh-7rem)] w-[calc(100vw-6rem)] bg-white text-black rounded-lg">
+                    className="absolute flex flex-col gap-5 px-5 py-10 blue1 text-lg font-semibold right-2 mt-12 h-[calc(100vh-7rem)] w-[calc(100vw-5rem)] bg-white border-gray-300 border-2 text-black rounded-lg">
 
+                        {links.map((item) => (
+                            <Link href={item.url} key={item.id} onClick={() => setOpen(false)}>
+                                <FontAwesomeIcon icon={item.icon} className="mr-3" />
+                                {item.title}
+                                <hr />
+
+                            </Link>    
+                        ))}
+                            <div className='flex px-4 py-3 items-center cursor-pointer justify-between blue2 w-40 duration-500  rounded-lg blue1 font-semibold place-self-center mt-3'>
+                                <button className=" text-sm mr-1  ">
+                                    Download App 
+                                </button>
+                                <FontAwesomeIcon icon={faArrowRight} className='w-3 h-3' />        
+                           </div>                        
                 </motion.div>
             )
 

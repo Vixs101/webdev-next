@@ -90,7 +90,7 @@ const GettingStarted = () => {
             </div>
   
             <Image
-            className=' ml-5 height1'
+            className=' md:ml-5 height1'
             src={gettingstarted}
             alt='A phone showing how to get started'
             />

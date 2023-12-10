@@ -29,10 +29,10 @@ color: #0345E6;
     }
 }
 
-.active, .accordion:hover {
+/* .active, .accordion:hover {
     background-color:#0345E6 ;
     color: white;
-}
+} */
 .footer{
     background-color: #1B1F23;
     width: 100%;
@@ -42,23 +42,14 @@ color: #0345E6;
 }
 /* card */
 .card {
-    transform-style: preserve-3d;
+    /* transform-style: preserve-3d; */
     transition:transform 1500ms ;
 }
 .card:hover {
     cursor: pointer;
-    transform: rotateY(180deg);
+    /* transform: rotateY(180deg); */
 }
 
-/* front and back of the card */
-.front,
-.back {
-    backface-visibility: hidden;
-}
-
-.back {
-    transform: rotateY(180deg);
-}
 
 .line {
     line-height: 280px;
