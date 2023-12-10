@@ -36,7 +36,7 @@ const Menu = () => {
 
             {open && (
                 <motion.div 
-                    className="absolute flex flex-col gap-5 px-5 py-10 blue1 text-lg font-semibold right-2 mt-12 h-[calc(100vh-7rem)] w-[calc(100vw-5rem)] bg-white border-gray-300 border-2 text-black rounded-lg">
+                    className="absolute flex flex-col gap-5 px-5 py-10 blue1 text-lg font-semibold right-2 mt-12 h-[calc(100vh-7rem)] w-[calc(100vw-5rem)] bg-white border-gray-300 border-2 text-black rounded-lg duration-500">
 
                         {links.map((item) => (
                             <Link href={item.url} key={item.id} onClick={() => setOpen(false)}>
