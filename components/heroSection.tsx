@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import React from "react";
+import { useMediaQuery } from 'react-responsive';
 import Image from 'next/image';
 import logo from '../public/images/logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -26,7 +27,8 @@ const HeroSection = () => {
         return () => clearTimeout(delayTimeout);
       }, []);
 
-      const lineHeight = window.innerWidth >= 768 ? '3.9rem' : '1.2';
+      const isDesktop = useMediaQuery({minWidth: 768});
+      const lineHeight = isDesktop ? '3.9rem' : '1.2';
 
     return (
         <section className='flex flex-col gap-7 md:gap-0 md:justify-between md:px-14 w-full md:h-99 bg-cover bg-center' style={{backgroundImage:"url(/images/herosection.png)"}}>
