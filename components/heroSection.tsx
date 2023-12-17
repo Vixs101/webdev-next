@@ -11,6 +11,7 @@ import google from '../public/images/googleplay.png';
 import apple from '../public/images/applestore.png';
 import phones from '../public/images/phones.png';
 import Menu from './menu';
+import { Link } from 'react-scroll/modules';
 
 const HeroSection = () => {    
       const variants = {
@@ -68,7 +69,7 @@ const HeroSection = () => {
                         </a>
                     </li>
                     <li className='mx-4 my-5 md:my-0 text-white font-semibold hover:border-b-2 hover:border-white'>
-                        <a href="#contact">
+                        <a href="#contactUs">
                             Contact Us
                         </a>
                     </li>

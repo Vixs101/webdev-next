@@ -31,7 +31,8 @@ const Services = () => {
             variants={variants}
             transition={{duration: 0.8}}
             
-            className='blue3 pb-5' id='services'>
+            className='blue3 pb-5 '
+            id='services'>
             <div className='text-center pt-5 mt-28'>
                 <h1 className='text-2xl md:text-5xl font-semibold md:mb-5'>Our Services</h1>
                 <p className='text-sm md:text-lg'>Our comprehensive suite of services encompasses seamless VTU transactions</p>

@@ -27,11 +27,11 @@ const Faqs = () => {
                             Why should I use BillsLink?
                         <FontAwesomeIcon icon={faChevronUp} className='w-5 h-5' />
                     </button>
-                    <div className='pt-0 pl-5 pr-10 pb-8 '>
-                        <p className='leading-6 blue2 w-full text-sm md:text-lg duration-500'>
-                            Billslink emerges as the optimal choice for your financial transactions, seamlessly combining efficiency, security, and user-friendly excellence. With Billslink, you gain access to a comprehensive platform that simplifies VTU top-ups and bill payments, ensuring a hassle-free experience at every step.
-                        </p>
-                    </div>
+                    <div className='pt-0 pl-5 pr-10 pb-8'>
+                    <p className='leading-6 blue2 w-full text-sm md:text-lg duration-500'>
+                        Billslink emerges as the optimal choice for your financial transactions, seamlessly combining efficiency, security, and user-friendly excellence. With Billslink, you gain access to a comprehensive platform that simplifies VTU top-ups and bill payments, ensuring a hassle-free experience at every step.
+                    </p>
+                </div>
                 </div>
                 
             )

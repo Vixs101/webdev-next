@@ -75,7 +75,8 @@ const DownloadApp = () => {
                 animate={inView ? 'visible' : 'hide'}
                 variants={variants}
                 transition={{duration: 0.9}}  
-                className='flex flex-col md:flex-row items-center justify-between mt-10 md:mt-20 w-full'>
+                className='flex flex-col md:flex-row items-center justify-between mt-10 md:mt-20 w-full'
+                id="contactUs">
                 <div className='flex flex-col gap-4 text-center md:text-left w-full md:w-1/2'>
                 <h1 className='blue1 text-2xl md:text-5xl font-semibold'>Let’s get in touch</h1> 
                 <p className=' md:w-10/12 leading-6'>

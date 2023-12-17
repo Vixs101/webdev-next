@@ -22,13 +22,13 @@ const Menu = () => {
             {!open ? (
                 <FontAwesomeIcon 
                     icon={faBars} 
-                    className='w-7 h-7 text-white md:hidden'
+                    className='w-6 h-6 text-white md:hidden'
                     onClick={() => setOpen(true)}
                 />
             ) : (
                 <FontAwesomeIcon 
                     icon={faX}
-                    className='w-7 h-7 text-white md:hidden'
+                    className='w-6 h-6 text-white md:hidden'
                     onClick={() => setOpen(false)}
                 /> 
             )
@@ -40,8 +40,8 @@ const Menu = () => {
 
                         {links.map((item) => (
                             <Link href={item.url} key={item.id} onClick={() => setOpen(false)}>
-                                <FontAwesomeIcon icon={item.icon} className="mr-3" />
-                                {item.title}
+                                    <FontAwesomeIcon icon={item.icon} className="mr-3" />
+                                    {item.title}
                                 <hr />
 
                             </Link>    
@@ -51,7 +51,8 @@ const Menu = () => {
                                     Download App 
                                 </button>
                                 <FontAwesomeIcon icon={faArrowRight} className='w-3 h-3' />        
-                           </div>                        
+                           </div> 
+                           <hr className=" bg-slate-950 mt-40"/>                       
                 </motion.div>
             )
 

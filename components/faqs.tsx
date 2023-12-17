@@ -28,7 +28,8 @@ const Faq = () => {
             animate={inView ? 'visible' : 'hidden'}
             variants={variants}
             transition={{duration: 0.9}}        
-            className='flex flex-col items-center justify-center px-5' id='faq'>
+            className='flex flex-col items-center justify-center px-5'
+            id='faq'>
             <div className='mt-28 mb-12 text-center  md:w-101'>
                 <h1 className='text-2xl md:text-5xl font-semibold mb-2 md:mb-3'>Frequently Asked Questions</h1>
                 <p className='text-sm md:text-lg'>Want to know more about our services? Our FAQs section is here to help you with useful information about us.</p>
